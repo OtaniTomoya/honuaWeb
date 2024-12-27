@@ -6,6 +6,7 @@ body {
   padding: 0;
   color: var(--text-color);
   background: var(--primary-color);
+  color: #fff;
 }
 
 h1, h2, h3 {
@@ -114,6 +115,7 @@ h1, h2, h3 {
 }
 
 .hero h1 {
+  padding-top: 70px;
   font-size: 3em;
 }
 
@@ -211,7 +213,7 @@ h1, h2, h3 {
 /* Contact Section */
 .contact {
   padding: 3em 0;
-  background: #e9f7fd;
+  background: var(--primary-color);
 }
 
 .contact h2 {
@@ -286,5 +288,127 @@ h1, h2, h3 {
   .hero {
     height: auto;
     padding: 3em 1em;
+  }
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile a {
+  display: inline-block; /* インラインブロックで横並びに */
+  margin: 10px; /* リンク間の余白を追加 */
+  padding: 10px 20px; /* ボタンのサイズを調整 */
+  text-align: center;
+  color: #fff; /* テキストを白に */
+  text-decoration: none; /* 下線を削除 */
+  border-radius: 5px; /* ボタンの角を丸く */
+  font-size: 16px; /* フォントサイズを調整 */
+  font-weight: bold; /* 太字に設定 */
+  transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.profile a:hover {
+  opacity: 0.9; /* ホバー時に少し暗くする */
+}
+
+.profile .instagram {
+  background-color: #4285F4; /* 青色の背景 */
+}
+
+.profile .instagram:hover {
+  background-color: #357ae8; /* ホバー時に濃い青 */
+}
+
+.profile .blog {
+  background-color: #8BC34A; /* 緑色の背景 */
+}
+
+.profile .blog:hover {
+  background-color: #7CB342; /* ホバー時に濃い緑 */
+}
+
+/* Store Info Section */
+.store-info {
+  padding: 3em 0;
+  background: var(--primary-color);
+  text-align: center;
+  position: relative;
+}
+
+.store-info .info-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.store-info .info-table th,
+.store-info .info-table td {
+  padding: 0.8em;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.store-info .info-table th {
+  font-weight: bold;
+  width: 30%;
+}
+
+.store-info .info-table td {
+  color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-card {
+    width: 80%;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 0.5em 0;
+  }
+
+  .header-info {
+    top: unset;
+    right: unset;
+    position: static;
+  }
+
+  .hero {
+    height: auto;
+    padding: 3em 1em;
+  }
+
+  .store-info .info-table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .store-info h2 {
+    font-size: 20px;
+    padding: 0.4em 0.8em;
+  }
+
+  .store-info h2::before {
+    border-width: 10px 15px 10px 0;
+  }
+
+  .store-info h2::after {
+    border-width: 10px 0 10px 15px;
   }
 }
