@@ -134,10 +134,6 @@ h1, h2, h3 {
   height: 100%;
 }
 
-.features h2 {
-  color: var(--text-color);
-}
-
 .feature {
   margin: 2em 0;
 }
@@ -152,7 +148,6 @@ h1, h2, h3 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #006064;
 }
 
 .menu-grid {
@@ -335,6 +330,33 @@ h1, h2, h3 {
 
 .profile .blog:hover {
   background-color: #7CB342; /* ホバー時に濃い緑 */
+}
+
+.contact{
+  text-align: center;
+}
+.contact a {
+  display: inline-block; /* インラインブロックで横並びに */
+  margin: 10px; /* リンク間の余白を追加 */
+  padding: 10px 20px; /* ボタンのサイズを調整 */
+  text-align: center;
+  color: #fff; /* テキストを白に */
+  text-decoration: none; /* 下線を削除 */
+  border-radius: 5px; /* ボタンの角を丸く */
+  font-size: 16px; /* フォントサイズを調整 */
+  font-weight: bold; /* 太字に設定 */
+  transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.contact a:hover {
+  opacity: 0.9; /* ホバー時に少し暗くする */
+}
+
+.contact .line {
+  background-color: #8BC34A; /* 青色の背景 */
+}
+.contact .line:hover {
+  background-color: #7CB342;
 }
 
 /* Store Info Section */
