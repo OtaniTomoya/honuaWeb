@@ -192,22 +192,30 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact">
-            <div class="container">
-                <h2 data-aos="fade-up">ご予約・お問い合わせ</h2>
-                <form action="https://peraichi.com/posts/complete" method="post">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" name="name" placeholder="サンプル 太郎" required>
-
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="email" name="email" placeholder="xxxx@example.com" required>
-
-                    <label for="message">お問い合わせ内容</label>
-                    <textarea id="message" name="message" placeholder="お問い合わせ内容をご記入ください" rows="4"></textarea>
-
-                    <button type="submit" class="btn btn-submit">送信</button>
-                </form>
-            </div>
-        </section>
+          <div class="container">
+              <h2 data-aos="fade-up">ご予約・お問い合わせ</h2>
+              <!-- Netlifyフォーム設定 -->
+              <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                  <!-- スパム対策の隠しフィールド -->
+                  <input type="hidden" name="form-name" value="contact" />
+                  <div hidden>
+                      <label>Don't fill this out:<input name="bot-field" /></label>
+                  </div>
+      
+                  <label for="name">お名前</label>
+                  <input type="text" id="name" name="name" placeholder="サンプル 太郎" required />
+      
+                  <label for="email">メールアドレス</label>
+                  <input type="email" id="email" name="email" placeholder="xxxx@example.com" required />
+      
+                  <label for="message">お問い合わせ内容</label>
+                  <textarea id="message" name="message" placeholder="お問い合わせ内容をご記入ください" rows="4"></textarea>
+      
+                  <button type="submit" class="btn btn-submit">送信</button>
+              </form>
+          </div>
+      </section>
+      
     </main>
 
     <!-- Footer -->
